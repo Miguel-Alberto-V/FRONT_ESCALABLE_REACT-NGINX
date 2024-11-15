@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  react_app:
+    image: miguelangel45/nombre_imagen:1.0
+    networks:
+      - my_stack_react_net
+    deploy:
+      mode: replicated
+      replicas: 2  # Número de réplicas (puedes ajustarlo según los recursos disponibles)
+      restart_policy:
+        condition: on-failure
+      update_config:
+        parallelism: 2
+        delay: 10s
+    ports:
+      - target: 3000  # Puerto interno de la aplicación
+        published: 3000  # Puerto publicado en el host
+        protocol: tcp
+        mode: host  # Usa `host` para publicar directamente en el host del nodo 
+
+  nginx:
+    image: miguelangel45/config_ngixn_proyect:4.0
+    ports:
+      - "80:80"
+    networks:
+      - my_stack_react_net
+    deploy:
+      placement:
+        constraints: [node.role == manager]  # Asegura que solo se ejecute en el nodo manager para centralizar el tráfico
+    depends_on:
+      - react_app
+
+networks:
+  my_stack_react_net:
+    driver: overlay
+    
