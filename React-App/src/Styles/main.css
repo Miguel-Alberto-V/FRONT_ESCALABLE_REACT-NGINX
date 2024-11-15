@@ -1,0 +1,54 @@
+/* MainContent.css */
+.main-content {
+    display: flex;
+    padding: 0; /* Remueve padding de main-content */
+    height: 100vh; /* Ocupa toda la altura del viewport */
+    width: 100vw; /* Ocupa toda la anchura del viewport */
+    background-image: url('/public/ImageFondoGuitarra.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .left-section {
+    flex: 1;
+    padding: 4rem; /* Controla el padding interno */
+    text-align: center;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-content: center;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+  }
+  
+  .register-button, .materials-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .register-button {
+    background-color: #ff6600;
+  }
+  
+  .materials-button {
+    background-color: black;
+    color: white;
+  }
+  
+  .right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .video-placeholder {
+    width: 80%;
+    height: auto;
+    max-width: 500px; /* Tamaño máximo para la imagen o video */
+    border-radius: 8px;
+  }
+  

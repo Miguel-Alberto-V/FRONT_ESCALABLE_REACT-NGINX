@@ -1,0 +1,46 @@
+/* App.css */
+.App {
+  font-family: Arial, sans-serif;
+}
+
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+}
+
+.nav-links a, .login-button {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.login-button {
+  background-color: #ff6600;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* Footer.css */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.social-links a, .policies a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+
