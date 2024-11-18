@@ -86,7 +86,7 @@ Resources:
             sudo chmod +x /usr/local/bin/docker-compose
             
             # Esperar a que Docker esté listo
-            sleep 10
+            sleep 7
             
             # Iniciar Docker Swarm
             sudo docker swarm init > /tmp/swarm-init-output
@@ -101,7 +101,7 @@ Resources:
             python3 -m http.server 8000 &
 
             # Desplegar el stack Docker después de que el Swarm esté configurado
-            sleep 80
+            sleep 100
             cd ~
             git clone https://github.com/Miguel-Alberto-V/FRONT_ESCALABLE_REACT-NGINX.git archivo
             cd archivo
@@ -138,7 +138,7 @@ Resources:
             sudo chmod +x /usr/local/bin/docker-compose
             
             # Esperar a que Docker esté listo y descargar el comando de unión
-            sleep 20
+            sleep 40
             sudo apt install -y python3
             
             cd /tmp
@@ -172,7 +172,7 @@ Resources:
             sudo chmod +x /usr/local/bin/docker-compose
             
             # Esperar a que Docker esté listo y descargar el comando de unión
-            sleep 20
+            sleep 40
             sudo apt install -y python3
             
             cd /tmp
