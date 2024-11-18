@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   react_app:
-    image: miguelangel45/nombre_imagen:1.0
+    image: miguelangel45/nombre_imagen:2.0
     networks:
       - my_stack_react_net
     deploy:

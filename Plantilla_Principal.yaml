@@ -101,7 +101,7 @@ Resources:
             python3 -m http.server 8000 &
 
             # Desplegar el stack Docker después de que el Swarm esté configurado
-            sleep 120
+            sleep 60
             cd ~
             git clone https://github.com/Miguel-Alberto-V/FRONT_ESCALABLE_REACT-NGINX.git archivo
             cd archivo
