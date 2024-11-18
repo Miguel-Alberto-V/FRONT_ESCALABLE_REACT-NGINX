@@ -43,4 +43,15 @@
   text-decoration: none;
 }
 
+/* Añadir esto en tu archivo CSS */
+a {
+  cursor: pointer; /* Cambia el cursor a la mano */
+  text-decoration: node; /* Asegura que se vea como un enlace subrayado */
+}
+
+a:hover {
+  text-decoration: none; /* Elimina el subrayado al pasar el mouse por encima */
+
+}
+
 

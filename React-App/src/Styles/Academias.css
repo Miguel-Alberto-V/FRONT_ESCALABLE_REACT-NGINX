@@ -1,0 +1,48 @@
+.academias-container {
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .academias-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .academias-container .highlight {
+    color: #ffa500;
+    text-decoration: underline;
+  }
+  
+  .academias-filter {
+    margin-bottom: 20px;
+  }
+  
+  .academias-filter button {
+    background: none;
+    border: none;
+    color: #ffa500;
+    cursor: pointer;
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  .academias-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px;
+    max-height: 500px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Scroll vertical */
+    padding: 10px;
+    scrollbar-width: thin; /* Estilo de scrollbar */
+  }
+  
+  .academias-grid::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .academias-grid::-webkit-scrollbar-thumb {
+    background-color: #ffa500;
+    border-radius: 4px;
+  }
+  

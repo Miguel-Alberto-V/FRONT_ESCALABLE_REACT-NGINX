@@ -1,0 +1,34 @@
+.academia-card {
+  background-color: #222;
+  color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.academia-card-image {
+  width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.academia-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.academia-card-button {
+  background-color: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.academia-card-button:hover {
+  background-color: #ff8000;
+}

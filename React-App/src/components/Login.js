@@ -7,7 +7,8 @@ import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
+  
   useEffect(() => {
     dispatch(showLoginPage()); // Establece el estado en página de login
   }, [dispatch]);
@@ -18,37 +19,41 @@ function Login() {
     console.log("Iniciando sesión...");
   };
 
+  const handleRegisterRedirect = () => {
+    navigate('/register'); // Redirige a la página de registro
+  };
+
   return (
     <div className="content">
-    <div className="login-container">
-      <h2>Iniciar sesión</h2>
-      <form onSubmit={handleSubmit} className="login-form">
-        <div className="form-group">
-          <label htmlFor="email">Correo electrónico</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Introduce tu correo"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Contraseña</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Introduce tu contraseña"
-            required
-          />
-        </div>
-        <button type="submit" className="login-button">Iniciar sesión</button>
-      </form>
-      <p className="register-link">
-        ¿No tienes cuenta? <a href={navigate('/register')}>Regístrate</a>
-      </p>
-    </div>
+      <div className="login-container">
+        <h2>Iniciar sesión</h2>
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="form-group">
+            <label htmlFor="email">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Introduce tu correo"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Introduce tu contraseña"
+              required
+            />
+          </div>
+          <button type="submit" className="login-button">Iniciar sesión</button>
+        </form>
+        <p className="register-link">
+          ¿No tienes cuenta? <a onClick={handleRegisterRedirect}>Regístrate</a>
+        </p>
+      </div>
     </div>
   );
 }

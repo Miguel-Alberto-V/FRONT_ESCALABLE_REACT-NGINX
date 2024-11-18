@@ -64,4 +64,33 @@
   .register-link a:hover {
     text-decoration: underline;
   }
+
+  h2 {
+    margin-bottom: 20px;
+    color: #ffa500;
+    margin-left: 60px;
+  }
   
+
+  .tutorial-list {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    padding: 10px;
+    scroll-behavior: smooth; /* Desplazamiento suave */
+    align-content: center;
+    margin-left: 6rem;
+  }
+  
+  .tutorial-list::-webkit-scrollbar {
+    height: 8px; /* Tamaño de la barra de desplazamiento */
+  }
+  
+  .tutorial-list::-webkit-scrollbar-thumb {
+    background-color: #ffa500; /* Color del "pulgar" de la barra */
+    border-radius: 4px;
+  }
+  
+  .tutorial-list::-webkit-scrollbar-track {
+    background: #292b2f; /* Color del fondo de la barra */
+  }

@@ -20,13 +20,19 @@ function Header() {
     }
   };
 
+  const handleRegisterRedirect = () => {
+    navigate('/'); // Redirige a la página de registro
+  };
+
+
   return (
     <header className="header">
-      <div className="logo">SoloGuitar</div>
+      <div className="logo">
+        <a onClick={handleRegisterRedirect}>SoloGuitar</a> </div>
       <nav className="nav-links">
-        <a href="#tutoriales">Tutoriales</a>
-        <a href="#comunidad">Comunidad</a>
-        <a href="#academias">Academias afiliadas</a>
+        <a onClick={() => {navigate('/tutoriales')}} role="link">Tutoriales</a>
+        <a onClick={() => {navigate('/comunidad')}} role="link">Comunidad</a>
+        <a onClick={() => {navigate('/academias')}} role="link">Academias afiliadas</a>
         <a href="#canciones">Canciones</a>
         <button onClick={handleButtonClick} className="login-button">
           {isLoginPage ? 'Registro' : 'Iniciar sesión'}

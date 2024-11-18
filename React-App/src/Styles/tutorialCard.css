@@ -1,0 +1,50 @@
+.tutorial-card {
+    flex: 0 0 auto; /* Evita que las tarjetas se reduzcan o expandan automáticamente */
+    background-color: #1c1c1e;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    width: 250px; /* Fija un ancho para las tarjetas */
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tutorial-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    margin: 10px 0;
+    color: #ffa500;
+  }
+  
+  p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #cfcfcf;
+  }
+  
+  .tutorial-actions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .view-button,
+  .like-button {
+    background-color: #292b2f;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-button:hover,
+  .like-button:hover {
+    background-color: #ffa500;
+  }
+  

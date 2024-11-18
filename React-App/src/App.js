@@ -7,7 +7,9 @@ import './App.css';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
-
+import Tutorials from './components/Tutoriales';
+import Comunidad from './components/Comunidad';
+import Academias from './components/Academias';
 
 function App() {
   return (
@@ -18,6 +20,9 @@ function App() {
           <Route path="/" element={<MainContent />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/tutoriales" element={<Tutorials />} />
+          <Route path="/comunidad" element={<Comunidad/>} />
+          <Route path="/academias" element={<Academias/>} />
         </Routes>
       <Footer />
     </div>
