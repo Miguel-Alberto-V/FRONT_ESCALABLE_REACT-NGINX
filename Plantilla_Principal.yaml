@@ -94,17 +94,16 @@ Resources:
             SWARM_JOIN_CMD="sudo $SWARM_JOIN_CMD"
 
             echo $SWARM_JOIN_CMD > /tmp/swarm-join-cmd.sh
-            cd /tmp
-            git clone https://github.com/Miguel-Alberto-V/FRONT_ESCALABLE_REACT-NGINX.git archivo
             
             # Iniciar un servidor HTTP simple en el puerto 8000 para compartir el comando
             sudo apt install -y python3
             cd /tmp
-            python3 script.py &
+            python3 -m http.server 8000 &
 
             # Desplegar el stack Docker después de que el Swarm esté configurado
             sleep 80
             cd ~
+            git clone https://github.com/Miguel-Alberto-V/FRONT_ESCALABLE_REACT-NGINX.git archivo
             cd archivo
             sudo docker stack deploy -c docker-compose.yml my_stack
 
